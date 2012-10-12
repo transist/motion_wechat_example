@@ -14,6 +14,7 @@ class WechatPhotoController < UIViewController
   end
 
   def send_photo
-    image_view.image
+    image_data = UIImagePNGRepresentation image_view.image
+    send_image_content('', image_data, title: 'random photo', description: 'random photo')
   end
 end
