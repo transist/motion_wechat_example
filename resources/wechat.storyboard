@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="UvU-Tk-YJk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+    </dependencies>
+    <scenes>
+        <!--Wechat Photo Controller - Photo-->
+        <scene sceneID="yRx-1t-yFq">
+            <objects>
+                <viewController id="wwa-Mt-lcg" customClass="WechatPhotoController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oil-Ix-0oe">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMb-Wh-7Ep">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="take_photo" destination="wwa-Mt-lcg" eventType="touchUpInside" id="qpg-Ev-GgS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myG-EL-BLP">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="send_photo" destination="wwa-Mt-lcg" eventType="touchUpInside" id="0wo-8R-gg1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjb-WH-z5N">
+                                <color key="backgroundColor" white="0.87140739050000005" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="BWf-Hi-U6Z"/>
+                                    <constraint firstAttribute="width" constant="232" id="Sdd-Ze-7Jj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="myG-EL-BLP" firstAttribute="leading" secondItem="pMb-Wh-7Ep" secondAttribute="leading" type="default" id="6Pc-Gz-COM"/>
+                            <constraint firstItem="pMb-Wh-7Ep" firstAttribute="centerX" secondItem="Oil-Ix-0oe" secondAttribute="centerX" type="default" id="CdP-ZM-Lmu"/>
+                            <constraint firstAttribute="bottom" secondItem="myG-EL-BLP" secondAttribute="bottom" constant="31" id="MIr-un-9Bg"/>
+                            <constraint firstItem="tjb-WH-z5N" firstAttribute="leading" secondItem="pMb-Wh-7Ep" secondAttribute="leading" type="default" id="Q4U-b3-oE7"/>
+                            <constraint firstAttribute="bottom" secondItem="pMb-Wh-7Ep" secondAttribute="bottom" constant="91" id="WpD-GC-9p1"/>
+                            <constraint firstItem="tjb-WH-z5N" firstAttribute="trailing" secondItem="pMb-Wh-7Ep" secondAttribute="trailing" type="default" id="fBK-gD-Lc6"/>
+                            <constraint firstItem="pMb-Wh-7Ep" firstAttribute="trailing" secondItem="myG-EL-BLP" secondAttribute="trailing" type="default" id="j0x-uZ-fAE"/>
+                            <constraint firstItem="tjb-WH-z5N" firstAttribute="top" secondItem="Oil-Ix-0oe" secondAttribute="top" constant="34" id="xoO-id-ibu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Photo" id="u7p-EG-Qgf"/>
+                    <connections>
+                        <outlet property="image_view" destination="tjb-WH-z5N" id="pcx-kR-VJn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAn-F5-cbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="377"/>
+        </scene>
+        <!--WechatTextController-->
+        <scene sceneID="fD5-ic-fkS">
+            <objects>
+                <viewController id="3zB-dS-lEn" userLabel="WechatTextController" customClass="WechatTextController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xFq-o9-edF">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKS-oA-QBS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="231" id="pFu-ke-tjk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-FF-CZS">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="send_text:" destination="3zB-dS-lEn" eventType="touchUpInside" id="TWX-ck-tf1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YKS-oA-QBS" firstAttribute="top" secondItem="xFq-o9-edF" secondAttribute="top" constant="123" id="JW6-a7-EOz"/>
+                            <constraint firstItem="GJX-FF-CZS" firstAttribute="centerX" secondItem="xFq-o9-edF" secondAttribute="centerX" type="default" id="STi-E5-fz5"/>
+                            <constraint firstItem="GJX-FF-CZS" firstAttribute="top" secondItem="xFq-o9-edF" secondAttribute="top" constant="209" id="Uit-Zo-boZ"/>
+                            <constraint firstItem="YKS-oA-QBS" firstAttribute="trailing" secondItem="GJX-FF-CZS" secondAttribute="trailing" type="default" id="arN-og-Mx9"/>
+                            <constraint firstItem="YKS-oA-QBS" firstAttribute="leading" secondItem="GJX-FF-CZS" secondAttribute="leading" type="default" id="u4k-Z9-hTI"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Text" id="7Ix-bL-DYZ"/>
+                    <connections>
+                        <outlet property="send_text_field" destination="YKS-oA-QBS" id="eB5-9e-Xdl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPn-7Y-hd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-276"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ls8-YU-Vow">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="UvU-Tk-YJk" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="CY9-2M-cJa">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3zB-dS-lEn" kind="relationship" relationship="viewControllers" id="WRy-xr-FV2"/>
+                        <segue destination="wwa-Mt-lcg" kind="relationship" relationship="viewControllers" id="7EW-KT-15A"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iq-0U-aWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="51"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="WechatPhotoController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WechatPhotoController.h"/>
+            <relationships>
+                <relationship kind="action" name="send_photo"/>
+                <relationship kind="action" name="take_photo"/>
+                <relationship kind="outlet" name="image_view"/>
+                <relationship kind="outlet" name="send_photo_btn"/>
+                <relationship kind="outlet" name="take_photo_btn"/>
+            </relationships>
+        </class>
+        <class className="WechatTextController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WechatTextController.h"/>
+            <relationships>
+                <relationship kind="action" name="send_text:"/>
+                <relationship kind="outlet" name="send_text_btn"/>
+                <relationship kind="outlet" name="send_text_field"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

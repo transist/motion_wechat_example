@@ -1,0 +1,2 @@
+module WechatTextHelper
+end
